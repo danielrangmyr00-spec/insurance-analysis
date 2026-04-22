@@ -1,0 +1,15 @@
+# Insurance Analysis Project
+
+## Beskrivning
+Analys av försäkringskostnader med R.
+
+## Struktur
+- data/ → dataset
+- analysis.Rmd → analys
+- report.md → rapport
+
+## Hur köra
+1. Öppna projekt i RStudio
+2. Installera paket:
+   install.packages(c("tidyverse","janitor","skimr"))
+3. Kör analysis.Rmd

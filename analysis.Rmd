@@ -1,0 +1,11 @@
+---
+title: "Insurance Analysis"
+output: html_document
+---
+
+## 1. Ladda paket
+
+```{r}
+library(tidyverse)
+library(janitor)
+library(skimr)
