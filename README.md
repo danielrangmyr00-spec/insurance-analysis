@@ -61,6 +61,10 @@ install.packages(c("tidyverse", "janitor", "skimr"))
 
 ------------------------------------------------------------------------
 
+## Rapport
+
+Rapporten finns i två format: - report.html (första version) - report.md (version förm GitHub)
+
 ## Författare
 
 Daniel Rangmyr
