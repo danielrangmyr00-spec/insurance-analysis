@@ -93,47 +93,54 @@ df <- df %>%
 # =========================
 
 # Histogram av kostnader
-ggplot(df, aes(x = charges)) +
+hist_plot <- ggplot(df, aes(x = charges)) +
   geom_histogram(bins = 30) +
   ggtitle("Distribution of Insurance Charges")
 # Fördelningen av kostnader är högerskev, 
 # med många låga värden och några mycket höga
+ggsave("output/charges_hist.png", plot = hist_plot, width = 6, height = 4)
+
 
 
 # Smoker vs kostnad
-ggplot(df, aes(x = smoker, y = charges)) +
+smoker_plot <- ggplot(df, aes(x = smoker, y = charges)) +
   geom_boxplot() +
   ggtitle("Smoker vs Charges")
 # Rökare har tydligt högre kostnader och större spridning än icke-rökare
-
+ggsave("output/smoker_vs_charges.png", plot = smoker_plot, width = 6, height = 4)
 
 
 # BMI vs kostnad
-ggplot(df, aes(x = bmi, y = charges)) +
+bmi_plot <- ggplot(df, aes(x = bmi, y = charges)) +
   geom_point(alpha = 0.5) +
   geom_smooth(method = "lm") +
   ggtitle("BMI vs Charges")
 # Det finns ett svagt positivt samband mellan BMI och kostnader, 
 # men med stor variation
+ggsave("output/bmi_vs_charges.png", plot = bmi_plot, width = 6, height = 4)
 
 
 
 # Exercise level vs kostnad
-ggplot(df, aes(x = exercise_level, y = charges)) +
+exercise_plot <- ggplot(df, aes(x = exercise_level, y = charges)) +
   geom_boxplot() +
   ggtitle("Exercise Level vs Charges")
 # Lägre aktivitetsnivå verkar vara kopplad till något högre kostnader, 
 # men skillnaderna är måttliga
+ggsave("output/exercise_vs_charges.png", plot = exercise_plot, width = 6, height = 4)
 
 
 
 # Risk score vs kostnad
-ggplot(df, aes(x = risk_score, y = charges)) +
+risk_score_plot <- ggplot(df, aes(x = risk_score, y = charges)) +
   geom_point(alpha = 0.5) +
   geom_smooth(method = "lm") +
   ggtitle("Risk Score vs Charges")
 
 # Kostnader ökar med högre risk score, vilket tyder på ett positivt samband
+ggsave("output/risk_score_vs_charges.png", plot = risk_score_plot, width = 6, height = 4)
+
+
 
 
 # Den inledande analysen tyder på att 
